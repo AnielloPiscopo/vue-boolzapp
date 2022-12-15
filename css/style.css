@@ -21,11 +21,21 @@ STILE GENERICO */
     /* ? COLORI */
     --bg-upper-part--bg-color:#009688;
     --bg-lower-part--bg-color: #d8dbd3;
+    --primary-color:black;
 
 
     /* ? DIMENSIONI */
     --bg-upper-part--height:15vh;
     --bg-lower-part--height:calc(100vh - var(--bg-upper-part--height));
+    --main--width:80%;
+}
+
+
+
+/* * TAG HTML */
+body{
+    color: var(--primary-color);
+    font-family: 'Lato';
 }
 
 
@@ -51,7 +61,7 @@ STILE SPECIFICO */
 /* * MAIN */
 main{
     transform: translate(-50%,-50%);
-    width: 75.5%;
+    width: var(--main--width);
     height: 95vh;
 }
 
