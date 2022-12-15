@@ -1,10 +1,34 @@
+/* !--------------------------------------------------------------------
+MOMENTANEO */
+main{
+    width: 80%;
+    height: 95vh;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
 /* *--------------------------------------------------------------------
 STILE GENERICO */
 
+/* * ROOT */
+:root{
+    /* ? COLORI */
+    --bg-upper-part--bg-color:#009688;
+    --bg-lower-part--bg-color: #d8dbd3;
 
 
-
-
+    /* ? DIMENSIONI */
+    --bg-upper-part--height:15vh;
+    --bg-lower-part--height:calc(100vh - var(--bg-upper-part--height));
+}
 
 
 
@@ -12,6 +36,26 @@ STILE GENERICO */
 
 /* *--------------------------------------------------------------------
 STILE SPECIFICO */
+
+/* * SEZIONE DELLO SFONDO */
+#background .upper-part{
+    background-color: var(--bg-upper-part--bg-color);
+    height: var(--bg-upper-part--height);
+}
+
+#background .lower-part{
+    background-color: var(--bg-lower-part--bg-color);
+    height: var(--bg-lower-part--height);
+}
+
+
+
+/* * MAIN */
+main{
+    transform: translate(-50%,-50%);
+}
+
+
 
 
 
