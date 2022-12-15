@@ -29,6 +29,7 @@ STILE GENERICO */
     --small-text--color:grey;
     --main--bg-color:white;
     --personal-messages--bg-color:#d5f9ba;
+    --chat-area-form--bg-color:#f3eeea;
 
 
     /* ? DIMENSIONI */
@@ -43,6 +44,7 @@ STILE GENERICO */
 body{
     color: var(--primary-color);
     font-family: 'Lato';
+    min-width: 756px;
 }
 
 
@@ -51,6 +53,16 @@ body{
 .my-small-text{
     font-size: 0.8rem;
     color: var(--small-text--color);
+}
+
+.my-btn:focus,
+.my-input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.my-icon{
+    font-size: 1.3rem;
 }
 
 
@@ -90,9 +102,19 @@ main aside{
     background-color: var(--aside--bg-color);
 }
 
+main aside .my-icon{
+    color: var(--aside--bg-color);
+    background-color: var(--main--bg-color);
+}
+
+
+/* ? AREA CONTATTI */
+#contacts{
+    height: 31rem;
+}
+
 
 /* ? AREA DELLA CHAT */
-
 #chat-messages{
     background-image: url('../assets/img/mine.jpg');
 }
@@ -103,6 +125,14 @@ main aside{
 
 #chat-messages .my-contact-message{
     background-color: var(--main--bg-color);
+}
+
+#chat-area form{
+    background-color: var(--chat-area-form--bg-color);
+}
+
+#chat-area form .my-icon{
+    color: var(--small-text--color);
 }
 
 
