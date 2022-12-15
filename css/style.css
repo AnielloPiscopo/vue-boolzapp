@@ -27,6 +27,7 @@ STILE GENERICO */
     --bg-upper-part--bg-color:#009688;
     --bg-lower-part--bg-color: #d8dbd3;
     --primary-color:black;
+    --aside--bg-color:#8ad3f1;
 
 
     /* ? DIMENSIONI */
@@ -41,6 +42,13 @@ STILE GENERICO */
 body{
     color: var(--primary-color);
     font-family: 'Lato';
+}
+
+
+
+/* * CLASSI */
+.my-small-text{
+    font-size: 0.8rem;
 }
 
 
@@ -70,8 +78,16 @@ main{
     height: 95vh;
 }
 
-main aside img{
+main img{
     width: 3rem;
+}
+
+main aside{
+    background-color: var(--aside--bg-color);
+}
+
+main>.row>*{
+    padding: 0;
 }
 
 
