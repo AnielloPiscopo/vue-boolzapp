@@ -33,6 +33,7 @@ STILE GENERICO */
     --aside--bg-color:#8ad3f1;
     --small-text--color:grey;
     --main--bg-color:white;
+    --personal-messages--bg-color:#d5f9ba;
 
 
     /* ? DIMENSIONI */
@@ -98,6 +99,14 @@ main aside{
 
 #chat-messages{
     background-image: url('../assets/img/mine.jpg');
+}
+
+#chat-messages .my-personal-message{
+    background-color: var(--personal-messages--bg-color);
+}
+
+#chat-messages .my-contact-message{
+    background-color: var(--main--bg-color);
 }
 
 
