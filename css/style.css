@@ -7,11 +7,6 @@ MOMENTANEO */
     background-color: rebeccapurple;
 }
 
-.row>*{
-    /* background-color: lightseagreen; */
-    border-right: 1px solid black;
-}
-
 
 
 
@@ -90,6 +85,7 @@ main img{
     width: 3rem;
 }
 
+/* ? ASIDE */
 main aside{
     background-color: var(--aside--bg-color);
 }
