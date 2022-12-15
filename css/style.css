@@ -4,6 +4,11 @@ main{
     background-color: red;
 }
 
+.row>*{
+    background-color: yellow;
+    border-right: 1px solid black;
+}
+
 
 
 
