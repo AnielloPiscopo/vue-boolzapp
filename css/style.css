@@ -51,12 +51,12 @@ body{
 STILE SPECIFICO */
 
 /* * SEZIONE DELLO SFONDO */
-#background .upper-part{
+#background .my-upper-part{
     background-color: var(--bg-upper-part--bg-color);
     height: var(--bg-upper-part--height);
 }
 
-#background .lower-part{
+#background .my-lower-part{
     background-color: var(--bg-lower-part--bg-color);
     height: var(--bg-lower-part--height);
 }
@@ -68,6 +68,10 @@ main{
     transform: translate(-50%,-50%);
     width: var(--main--width);
     height: 95vh;
+}
+
+main aside img{
+    width: 3rem;
 }
 
 
