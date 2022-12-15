@@ -1,11 +1,14 @@
 /* !--------------------------------------------------------------------
 MOMENTANEO */
-main{
-    background-color: red;
+#chat-area{
+    height: 100%;
+}
+#chat-messages{
+    background-color: rebeccapurple;
 }
 
 .row>*{
-    background-color: yellow;
+    /* background-color: lightseagreen; */
     border-right: 1px solid black;
 }
 
@@ -28,6 +31,8 @@ STILE GENERICO */
     --bg-lower-part--bg-color: #d8dbd3;
     --primary-color:black;
     --aside--bg-color:#8ad3f1;
+    --small-text--color:grey;
+    --main--bg-color:white;
 
 
     /* ? DIMENSIONI */
@@ -49,6 +54,7 @@ body{
 /* * CLASSI */
 .my-small-text{
     font-size: 0.8rem;
+    color: var(--small-text--color);
 }
 
 
@@ -76,6 +82,7 @@ main{
     transform: translate(-50%,-50%);
     width: var(--main--width);
     height: 95vh;
+    background-color: var(--main--bg-color);
 }
 
 main img{
@@ -86,8 +93,11 @@ main aside{
     background-color: var(--aside--bg-color);
 }
 
-main>.row>*{
-    padding: 0;
+
+/* ? AREA DELLA CHAT */
+
+#chat-messages{
+    background-image: url('../assets/img/mine.jpg');
 }
 
 

@@ -50,7 +50,7 @@
             </div>
 
             <main class="position-absolute top-50 start-50">
-                <div class="row h-100">
+                <div class="row h-100 g-0">
                     <div class="col-5">
                         <section class="py-2 ps-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
                             <div class="w-75 d-flex align-items-center">
@@ -91,11 +91,7 @@
                                     </span>
                                 </div>
 
-                                <div class="w-25 text-end">
-                                    <i>i</i>
-                                    <i>i</i>
-                                    <i>i</i>
-                                </div>
+                                <div class="w-25 text-end my-small-text">12:00</div>
                             </li>
                         </ul>
                     </div>
@@ -103,7 +99,28 @@
 
 
                     <div class="col-7">
-                        <section id="chat-area">
+                        <section id="chat-area" class="d-flex flex-column h-100">
+                            <section class="py-2 px-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
+                                <div class="w-75 d-flex align-items-center">
+                                    <img src="assets/img/avatar_1.jpg" alt="aasddsf" class="rounded rounded-circle">
+                                    <span class="d-flex flex-column px-3">
+                                        <span>Michele</span>
+
+                                        <span class="my-small-text">Ultimo accesso oggi alle 12:00</span>
+                                    </span>
+                                </div>
+    
+                                <div class="w-25 text-end">
+                                    <i>i</i>
+                                    <i>i</i>
+                                    <i>i</i>
+                                </div>
+                            </section>
+
+
+                            <section id="chat-messages" class="h-100"></section>
+
+
                             <section class="py-2 px-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
                                 <div class="w-75 d-flex align-items-center">
                                     <img src="assets/img/avatar_1.jpg" alt="aasddsf" class="rounded rounded-circle">
