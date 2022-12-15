@@ -1,8 +1,6 @@
 /* !--------------------------------------------------------------------
 MOMENTANEO */
 main{
-    width: 80%;
-    height: 95vh;
     background-color: red;
 }
 
@@ -53,6 +51,8 @@ STILE SPECIFICO */
 /* * MAIN */
 main{
     transform: translate(-50%,-50%);
+    width: 75.5%;
+    height: 95vh;
 }
 
 
