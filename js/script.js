@@ -227,7 +227,6 @@ createApp({
         },
 
         compareTwoStrings(value){
-            let list = this.getAllTheVisibleContacts();
             this.contacts.forEach(contact => {
                 console.log(contact.name.toLowerCase());
                 if(!contact.name.toLowerCase() === value) contact.visible = false;
