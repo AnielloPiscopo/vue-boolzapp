@@ -194,7 +194,7 @@ createApp({
         addElementToTheList(list,newElementText,status){
             newElementText = newElementText.toLowerCase();
 
-            if(newElementText !='' && newElementText.length>=2){
+            if(newElementText !=''){
                 const newElement = {
                     date: 'sdfsdf',
                     message: newElementText,
@@ -211,23 +211,27 @@ createApp({
             this.newMessage = '';
         },
 
-        receiveMessage(listOfMessages,message,messageStatus){
-            setTimeout(this.addElementToTheList,1000,listOfMessages,message,messageStatus); 
+        receiveMessage(listOfMessages,newContactMessage,messageStatus){
+            setTimeout(this.addElementToTheList,1000,listOfMessages,newContactMessage,messageStatus); 
         },
 
-        controlPresenceInList(char){
-            let value = '';
-            
-            if((/[a-zA-Z]/).test(char)){
-                value = char;
+        controlPresenceInList(value){
+            if((/[a-zA-Z]/).test(value)){
                 console.log(value);
-                this.contacts.forEach(contact=> {
+                this.contacts.forEach(contact => {
                     if(!contact.name.toLowerCase().includes(value)) contact.visible = false;
-
+    
                     else contact.visible = true;
-
                 })
             }
+        },
+
+        compareTwoStrings(value){
+            let list = this.getAllTheVisibleContacts();
+            this.contacts.forEach(contact => {
+                console.log(contact.name.toLowerCase());
+                if(!contact.name.toLowerCase() === value) contact.visible = false;
+            })
         },
 
         seeAllContacts(value){
