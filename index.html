@@ -97,7 +97,7 @@
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </button>
     
-                                    <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat" v-model="controlContactsValue" @keyup="controlPresenceInList(controlContactsValue)">
+                                    <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat" v-model="controlContactsValue" @keyup="controlPresenceInList(controlContactsValue)" @keyup.backspace="seeAllContacts(controlContactsValue)">
                                 </form>
                             </nav>
     

@@ -216,13 +216,24 @@ createApp({
         },
 
         controlPresenceInList(char){
+            let value = '';
+            
             if((/[a-zA-Z]/).test(char)){
-                this.contacts.forEach(contact => {
-                    if(char === '') contact.visible = true;
-    
-                    else if(!contact.name.toLowerCase().includes(char)) contact.visible = false;
+                value = char;
+                console.log(value);
+                this.contacts.forEach(contact=> {
+                    if(!contact.name.toLowerCase().includes(value)) contact.visible = false;
+
+                    else contact.visible = true;
+
                 })
             }
+        },
+
+        seeAllContacts(value){
+            this.contacts.forEach(contact => {
+                if(value === '') contact.visible = true;
+            })
         }
     },
 }).mount('#app')
