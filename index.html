@@ -97,7 +97,7 @@
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </button>
     
-                                    <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat" v-model="controlContactsValue" @keyup="controlPresenceInList(controlContactsValue)" @keyup.backspace="seeAllContacts(controlContactsValue)">
+                                    <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat" v-model.trim="controlContactsValue" @keyup="controlPresenceInList(controlContactsValue)" @keyup.backspace="seeAllContacts(controlContactsValue)">
                                 </form>
                             </nav>
     
@@ -162,7 +162,7 @@
                                   <i class="fa-regular fa-face-smile input-group-text px-4 bg-transparent border-0 my-icon"></i>
                                 </div>
 
-                                <input type="text" class="form-control my-small-text my-input" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addElementToTheList(contacts[activeContactIndex].messages,newMessage,'sent');receiveMessage(contacts[activeContactIndex].messages,'ok','received')">
+                                <input type="text" class="form-control my-small-text my-input" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyup.enter="addElementToTheList(contacts[activeContactIndex].messages,newMessage,'sent');receiveMessage(contacts[activeContactIndex].messages,'ok','received')">
 
                                 <div class="input-group-prepend">
                                     <i class="fa-regular fa-face-smile input-group-text px-4 bg-transparent border-0 my-icon"></i>
