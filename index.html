@@ -94,7 +94,7 @@
                             <nav class="navbar navbar-light bg-light">
                                 <form class="w-100 d-flex mx-2 border-1 border">
                                     <button class="btn btn-outline-success rounded-1 my-btn my-small-text px-4 border-0" type="submit" @click.prevent ="findTheFirstVisibleContact()">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <i class="fa-solid fa-magnifying-glass my-icon"></i>
                                     </button>
     
                                     <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat" v-model.trim="controlContactsValue" @keyup="controlPresenceInList(controlContactsValue)" @keyup.backspace="seeAllContacts(controlContactsValue)" @keyup.enter="findTheFirstVisibleContact()">
