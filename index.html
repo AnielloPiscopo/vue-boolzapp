@@ -44,74 +44,89 @@
 
     <body>
         <div id="app">
+            <!-- * BACKGROUND -->
             <div id="background">
                 <div class="my-upper-part"></div>
                 <div class="my-lower-part"></div>
             </div>
 
+
+
+
+
+            <!-- * MAIN -->
             <main class="position-absolute top-50 start-50">
                 <div class="row h-100 g-0">
-                    <div class="col-4 border-end h-100">
-                        <section class="py-2 ps-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
-                            <div class="w-75 d-flex align-items-center">
-                                <img src="assets/img/avatar_io.jpg" alt="aasddsf" class="rounded rounded-circle">
-                                <span>
-                                    <span>Sofia</span>
-                                </span>
-                            </div>
-
-                            <div class="w-25 text-end">
-                                <i>i</i>
-                                <i>i</i>
-                                <i>i</i>
-                            </div>
-                        </section>
-
-
-                        <aside class="py-3 align-items-center d-flex justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <i class="my-icon fa-solid fa-bell-slash rounded rounded-circle ms-4 p-3 text-center rounded rounded-circle"></i>
-                                <span class="d-flex flex-column px-3">
-                                    <span>Ricevi notifiche di nuovi messaggi</span>
-
-                                    <span class="text-decoration-underline my-small-text">Attiva notifiche desktop</span>
-                                </span>
-                            </div>
-                        </aside>
-
-
-                        <nav class="navbar navbar-light bg-light">
-                            <form class="w-100 d-flex mx-2 border-1 border">
-                                <button class="btn btn-outline-success rounded-1 my-btn my-small-text px-4 border-0" type="submit" @click.prevent>
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                </button>
-
-                                <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat">
-                            </form>
-                        </nav>
-
-
-                        <ul id="contacts" class="list-unstyled overflow-auto">
-                            <li v-for="(contact,index) in contacts" class="py-2 d-flex justify-content-between pe-3 border-top" @click = 'updateIndex(index)'>
-                                <div class="d-flex w-75">
-                                    <img :src=`assets/img/avatar${contact.avatar}.jpg` alt="aasddsf" class="rounded rounded-circle ms-3">
-                                    <span class="d-flex flex-column px-3">
-                                        <span>{{contact.name}}</span>
-    
-                                        <span class="text-decoration-underline my-small-text">Ultimo messaggio inviato</span>
+                    <!-- ? CONTAINER DEI CONTATTI -->
+                    <div class="col-4">
+                        <div id="contacts-container" class="border-end g-0 h-100 d-flex flex-column">
+                            <!-- * Info dell'account -->
+                            <div class="py-2 ps-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
+                                <div class="w-75 d-flex align-items-center">
+                                    <img src="assets/img/avatar_io.jpg" alt="aasddsf" class="rounded rounded-circle">
+                                    <span>
+                                        <span>Sofia</span>
                                     </span>
                                 </div>
-
-                                <div class="w-25 text-end my-small-text">12:00</div>
-                            </li>
-                        </ul>
+    
+                                <div class="w-25 text-end">
+                                    <i>i</i>
+                                    <i>i</i>
+                                    <i>i</i>
+                                </div>
+                            </div>
+    
+    
+                            <!-- * Aside -->
+                            <aside class="py-3 align-items-center d-flex justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <i class="my-icon fa-solid fa-bell-slash rounded rounded-circle ms-4 p-3 text-center rounded rounded-circle"></i>
+                                    <span class="d-flex flex-column px-3">
+                                        <span>Ricevi notifiche di nuovi messaggi</span>
+    
+                                        <span class="text-decoration-underline my-small-text">Attiva notifiche desktop</span>
+                                    </span>
+                                </div>
+                            </aside>
+    
+    
+                            <!-- * Navbar con searchbar -->
+                            <nav class="navbar navbar-light bg-light">
+                                <form class="w-100 d-flex mx-2 border-1 border">
+                                    <button class="btn btn-outline-success rounded-1 my-btn my-small-text px-4 border-0" type="submit" @click.prevent>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+    
+                                    <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat">
+                                </form>
+                            </nav>
+    
+    
+                            <!-- * Contatti -->
+                            <ul id="contacts" class="list-unstyled overflow-auto">
+                                <li v-for="(contact,index) in contacts" class="py-2 d-flex justify-content-between pe-3 border-top" @click = 'updateIndex(index)'>
+                                    <div class="d-flex w-75">
+                                        <img :src=`assets/img/avatar${contact.avatar}.jpg` alt="aasddsf" class="rounded rounded-circle ms-3">
+                                        <span class="d-flex flex-column px-3">
+                                            <span>{{contact.name}}</span>
+        
+                                            <span class="text-decoration-underline my-small-text">Ultimo messaggio inviato</span>
+                                        </span>
+                                    </div>
+    
+                                    <div class="w-25 text-end my-small-text">12:00</div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
 
 
+                    <!-- ? SEZIONE DELLA CHAT -->
                     <div class="col-8">
-                        <section id="chat-area" class="d-flex flex-column h-100">
-                            <section class="py-2 px-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
+                        <article id="chat-area" class="d-flex flex-column h-100">
+                            <!-- * Info dell'account -->
+                            <div class="py-2 px-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
                                 <div class="w-75 d-flex align-items-center">
                                     <img :src=`assets/img/avatar${contacts[activeContactIndex].avatar}.jpg` alt="aasddsf" class="rounded rounded-circle">
                                     <span class="d-flex flex-column px-3">
@@ -126,17 +141,19 @@
                                     <i>i</i>
                                     <i>i</i>
                                 </div>
-                            </section>
+                            </div>
 
 
-                            <section id="chat-messages" class="h-100 p-5">
+                            <!-- * Messaggi della chat -->
+                            <article id="chat-messages" class="p-5">
                                 <div v-for="element in contacts[activeContactIndex].messages" class="my-message-container clearfix">
                                     <span class="my-message rounded rounded-3 px-3 py-2" :class="(element.status==='sent') ? 'my-personal-message' : 'my-contact-message'">{{element.message}}</span>
                                 </div>
-                            </section>
+                            </article>
 
 
-                            <form class="input-group py-2 d-flex align-items-center">
+                            <!-- * Sezione invio messaggi -->
+                            <div id="input-send-message-area" class="input-group py-2 d-flex align-items-center">
                                 <div class="input-group-prepend">
                                   <i class="fa-regular fa-face-smile input-group-text px-4 bg-transparent border-0 my-icon"></i>
                                 </div>
@@ -146,8 +163,8 @@
                                 <div class="input-group-prepend">
                                     <i class="fa-regular fa-face-smile input-group-text px-4 bg-transparent border-0 my-icon"></i>
                                 </div>
-                            </form>
-                        </section>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </main>

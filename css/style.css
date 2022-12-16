@@ -46,6 +46,7 @@ body{
     color: var(--primary-color);
     font-family: 'Lato';
     min-width: 756px;
+    overflow: hidden;
 }
 
 
@@ -115,7 +116,7 @@ main aside .my-icon{
 
 /* ? AREA CONTATTI */
 #contacts{
-    height: 31rem;
+    height: 30rem;
 }
 
 #contacts li{
@@ -130,6 +131,7 @@ main aside .my-icon{
 /* ? AREA DELLA CHAT */
 #chat-messages{
     background-image: url('../assets/img/mine.jpg');
+    height: 36.35rem;
 }
 
 #chat-messages .my-message-container{
@@ -151,11 +153,11 @@ main aside .my-icon{
     float: left;
 }
 
-#chat-area form{
+#input-send-message{
     background-color: var(--account-info--bg-color);
 }
 
-#chat-area form .my-icon{
+#input-send-message-area .my-icon{
     color: var(--small-text--color);
 }
 
