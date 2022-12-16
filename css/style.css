@@ -119,12 +119,23 @@ main aside .my-icon{
     background-image: url('../assets/img/mine.jpg');
 }
 
-#chat-messages .my-personal-message{
-    background-color: var(--personal-messages--bg-color);
+#chat-messages .my-message-container{
+    margin: 0.5rem;
 }
 
-#chat-messages .my-contact-message{
+#chat-messages .my-message{
+    font-size: 0.8rem;
+    width: 40%;
+}
+
+#chat-messages .my-message.my-personal-message{
+    background-color: var(--personal-messages--bg-color);
+    float: right;
+}
+
+#chat-messages .my-message.my-contact-message{
     background-color: var(--main--bg-color);
+    float: left;
 }
 
 #chat-area form{

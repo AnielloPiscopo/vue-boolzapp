@@ -175,12 +175,9 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+
+            activeContactIndex : 0,
         }
-    },
-
-
-
-    methods: {
     },
 }).mount('#app')
