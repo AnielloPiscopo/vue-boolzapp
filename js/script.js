@@ -204,7 +204,6 @@ createApp({
             }
 
             this.refreshInputField();
-            this.receiveMessage(list,'ok','received');
         },
 
         refreshInputField(){
@@ -212,17 +211,7 @@ createApp({
         },
 
         receiveMessage(listOfMessages,message,messageStatus){
-            setTimeout(this.botMessage,1000); 
+            setTimeout(this.addElementToTheList,1000,listOfMessages,message,messageStatus); 
         },
-
-        botMessage(){
-            const element = {
-                date:'16/12/2022',
-                message: 'ok',
-                status : 'receveid',
-            }
-
-            this.contacts[this.activeContactIndex].messages.push(element);
-        }
     },
 }).mount('#app')

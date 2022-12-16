@@ -160,7 +160,7 @@
                                   <i class="fa-regular fa-face-smile input-group-text px-4 bg-transparent border-0 my-icon"></i>
                                 </div>
 
-                                <input type="text" class="form-control my-small-text my-input" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addElementToTheList(contacts[activeContactIndex].messages,newMessage,'sent')">
+                                <input type="text" class="form-control my-small-text my-input" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addElementToTheList(contacts[activeContactIndex].messages,newMessage,'sent');receiveMessage(contacts[activeContactIndex].messages,'ok','received')">
 
                                 <div class="input-group-prepend">
                                     <i class="fa-regular fa-face-smile input-group-text px-4 bg-transparent border-0 my-icon"></i>
