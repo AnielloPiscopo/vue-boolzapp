@@ -178,6 +178,7 @@ createApp({
             ],
 
             activeContactIndex : 0,
+            newMessage : '',
         }
     },
 
@@ -186,6 +187,27 @@ createApp({
     methods: {
         updateIndex(index){
             this.activeContactIndex = index;
-        }
+        },
+
+        removeElementOfTheList(list,index){
+            list.splice(index,1);
+        },
+
+        addElementToTheList(list,newElementText){
+            newElementText = newElementText.toLowerCase();
+
+            if(newElementText !='' && newElementText.length>=2){
+                const newElement = {
+                    date: 'sdfsdf',
+                    message: newElementText,
+                    status: 'sent',
+                }
+    
+                list.push(newElement);
+            }
+
+            this.refreshInputField();
+            this.updateDate();
+        },
     },
 }).mount('#app')
