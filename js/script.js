@@ -217,7 +217,6 @@ createApp({
 
         controlPresenceInList(value){
             if((/[a-zA-Z]/).test(value)){
-                console.log(value);
                 this.contacts.forEach(contact => {
                     if(!contact.name.toLowerCase().includes(value)) contact.visible = false;
     
@@ -226,11 +225,11 @@ createApp({
             }
         },
 
-        compareTwoStrings(value){
-            this.contacts.forEach(contact => {
-                console.log(contact.name.toLowerCase());
-                if(!contact.name.toLowerCase() === value) contact.visible = false;
-            })
+        findTheFirstVisibleContact(){
+            const visibleContacts = this.contacts.filter(contact => contact.visible);
+            const firstVisibleContact = visibleContacts[0];
+            const firstVisibleContactIndex = this.contacts.indexOf(firstVisibleContact);
+            this.updateIndex(firstVisibleContactIndex);
         },
 
         seeAllContacts(value){

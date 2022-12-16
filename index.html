@@ -58,7 +58,7 @@
             <main class="position-absolute top-50 start-50">
                 <div class="row h-100 g-0">
                     <!-- ? CONTAINER DEI CONTATTI -->
-                    <div class="col-4">
+                    <div class="col-4 h-100">
                         <div id="contacts-container" class="border-end g-0 h-100 d-flex flex-column">
                             <!-- * Info dell'account -->
                             <div class="py-2 ps-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
@@ -93,11 +93,11 @@
                             <!-- * Navbar con searchbar -->
                             <nav class="navbar navbar-light bg-light">
                                 <form class="w-100 d-flex mx-2 border-1 border">
-                                    <button class="btn btn-outline-success rounded-1 my-btn my-small-text px-4 border-0" type="submit" @click.prevent ="compareTwoStrings(controlContactsValue)">
+                                    <button class="btn btn-outline-success rounded-1 my-btn my-small-text px-4 border-0" type="submit" @click.prevent ="findTheFirstVisibleContact()">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </button>
     
-                                    <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat" v-model.trim="controlContactsValue" @keyup="controlPresenceInList(controlContactsValue)" @keyup.backspace="seeAllContacts(controlContactsValue)" @keyup.enter='compareTwoStrings(controlContactsValue)'>
+                                    <input class="form-control border-0 my-input my-small-text rounded-1 fw-bold" type="text" placeholder="Cerca o inizia una nuova chat" v-model.trim="controlContactsValue" @keyup="controlPresenceInList(controlContactsValue)" @keyup.backspace="seeAllContacts(controlContactsValue)" @keyup.enter="findTheFirstVisibleContact()">
                                 </form>
                             </nav>
     
@@ -116,7 +116,7 @@
                                                 <span class="my-small-text">12:00</span>
                                             </div>
         
-                                            <span class="text-decoration-underline my-small-text">{{contact.messages[contact.messages.length-1].message}}</span>
+                                            <span class="my-small-text">{{contact.messages[contact.messages.length-1].message}}</span>
                                         </div>
                                     </article>
                                 </li>
@@ -127,8 +127,8 @@
 
 
                     <!-- ? AREA DELLA CHAT -->
-                    <div class="col-8">
-                        <article id="chat-area" class="d-flex flex-column h-100">
+                    <div class="col-8 h-100">
+                        <article id="chat-area">
                             <!-- * Info dell'account -->
                             <div class="py-2 px-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
                                 <div class="w-75 d-flex align-items-center">

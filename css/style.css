@@ -98,7 +98,8 @@ main{
 }
 
 main img{
-    width: 3rem;
+    width: 48px;
+    height: 48px;
 }
 
 main .my-account-info{
