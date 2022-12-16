@@ -189,10 +189,6 @@ createApp({
             this.activeContactIndex = index;
         },
 
-        removeElementOfTheList(list,index){
-            list.splice(index,1);
-        },
-
         addElementToTheList(list,newElementText){
             newElementText = newElementText.toLowerCase();
 
@@ -207,7 +203,10 @@ createApp({
             }
 
             this.refreshInputField();
-            this.updateDate();
+        },
+
+        refreshInputField(){
+            this.newMessage = '';
         },
     },
 }).mount('#app')
