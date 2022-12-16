@@ -179,6 +179,7 @@ createApp({
 
             activeContactIndex : 0,
             newMessage : '',
+            contactMessagePresence : false,
         }
     },
 
@@ -189,24 +190,30 @@ createApp({
             this.activeContactIndex = index;
         },
 
-        addElementToTheList(list,newElementText){
+        addElementToTheList(list,newElementText,status){
+            this.contactMessagePresence = false;
             newElementText = newElementText.toLowerCase();
 
             if(newElementText !='' && newElementText.length>=2){
                 const newElement = {
                     date: 'sdfsdf',
                     message: newElementText,
-                    status: 'sent',
+                    status: status,
                 }
     
                 list.push(newElement);
             }
 
             this.refreshInputField();
+            this.receiveMessage(list,'ok','received');
         },
 
         refreshInputField(){
             this.newMessage = '';
+        },
+
+        receiveMessage(listOfMessages,message,messageStatus){
+            let contactMessage =  setTimeout((this.addElementToTheList),1000,listOfMessages,message,'received');
         },
     },
 }).mount('#app')
