@@ -104,17 +104,19 @@
     
                             <!-- * Contatti -->
                             <ul id="contacts" class="list-unstyled overflow-auto">
-                                <li v-for="(contact,index) in contacts" class="py-2 d-flex justify-content-between pe-3 border-top" @click = 'updateIndex(index)'>
-                                    <div class="d-flex w-75">
+                                <li v-for="(contact,index) in contacts" class="py-2 d-flex pe-3 border-top" @click = 'updateIndex(index)'>
+                                    <div class="d-flex">
                                         <img :src=`assets/img/avatar${contact.avatar}.jpg` alt="aasddsf" class="rounded rounded-circle ms-3">
-                                        <span class="d-flex flex-column px-3">
-                                            <span>{{contact.name}}</span>
-        
-                                            <span class="text-decoration-underline my-small-text">{{contact.messages[contact.messages.length-1].message}}</span>
-                                        </span>
                                     </div>
+                                    
+                                    <div class="my-contact-info d-flex flex-column px-3 w-100">
+                                        <div class="d-flex justify-content-between">
+                                            <span>{{contact.name}}</span>
+                                            <span class="my-small-text">12:00</span>
+                                        </div>
     
-                                    <div class="w-25 text-end my-small-text">12:00</div>
+                                        <span class="text-decoration-underline my-small-text">{{contact.messages[contact.messages.length-1].message}}</span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -145,7 +147,7 @@
 
 
                             <!-- * Messaggi della chat -->
-                            <article id="chat-messages" class="p-5">
+                            <article id="chat-messages" class="p-5 overflow-auto">
                                 <div v-for="element in contacts[activeContactIndex].messages" class="my-message-container clearfix">
                                     <span class="my-message rounded rounded-3 px-3 py-2" :class="(element.status==='sent') ? 'my-personal-message' : 'my-contact-message'">{{element.message}}</span>
                                 </div>

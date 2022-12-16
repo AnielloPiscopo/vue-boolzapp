@@ -213,7 +213,14 @@ createApp({
         },
 
         receiveMessage(listOfMessages,message,messageStatus){
-            let contactMessage =  setTimeout((this.addElementToTheList),1000,listOfMessages,message,'received');
+            let contactMessage =  setTimeout(this.addElementToTheList,1000,listOfMessages,message,'received');
+
+            setTimeout(this.breakTimeout,1000,contactMessage);
         },
+
+        breakTimeout(timeout){
+            clearTimeout(timeout);
+            console.log('sh')
+        }
     },
 }).mount('#app')
