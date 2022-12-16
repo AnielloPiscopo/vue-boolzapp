@@ -23,7 +23,9 @@ STILE GENERICO */
 :root{
     /* ? COLORI */
     --bg-upper-part--bg-color:#009688;
-    --bg-lower-part--bg-color: #d8dbd3;
+    --bg-lower-part--bg-color: linear-gradient(to bottom,
+    #dddbd1,
+    #d2dbdc);
     --primary-color:black;
     --aside--bg-color:#8ad3f1;
     --small-text--color:grey;
@@ -81,7 +83,7 @@ STILE SPECIFICO */
 }
 
 #background .my-lower-part{
-    background-color: var(--bg-lower-part--bg-color);
+    background: var(--bg-lower-part--bg-color);
     height: var(--bg-lower-part--height);
 }
 
