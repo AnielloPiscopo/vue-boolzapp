@@ -30,6 +30,7 @@ STILE GENERICO */
     --main--bg-color:white;
     --personal-messages--bg-color:#d5f9ba;
     --account-info--bg-color:#f3eeea;
+    --contact-hover--bg-color:#e9ebeb;
 
 
     /* ? DIMENSIONI */
@@ -122,7 +123,7 @@ main aside .my-icon{
 }
 
 #contacts li:hover{
-    background-color: var(--account-info--bg-color);
+    background-color: var(--contact-hover--bg-color);
 }
 
 
