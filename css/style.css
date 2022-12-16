@@ -29,7 +29,7 @@ STILE GENERICO */
     --small-text--color:grey;
     --main--bg-color:white;
     --personal-messages--bg-color:#d5f9ba;
-    --chat-area-form--bg-color:#f3eeea;
+    --account-info--bg-color:#f3eeea;
 
 
     /* ? DIMENSIONI */
@@ -97,6 +97,10 @@ main img{
     width: 3rem;
 }
 
+main .my-account-info{
+    background-color: var(--account-info--bg-color);
+}
+
 /* ? ASIDE */
 main aside{
     background-color: var(--aside--bg-color);
@@ -111,6 +115,14 @@ main aside .my-icon{
 /* ? AREA CONTATTI */
 #contacts{
     height: 31rem;
+}
+
+#contacts li{
+    cursor: pointer;
+}
+
+#contacts li:hover{
+    background-color: var(--account-info--bg-color);
 }
 
 
@@ -139,7 +151,7 @@ main aside .my-icon{
 }
 
 #chat-area form{
-    background-color: var(--chat-area-form--bg-color);
+    background-color: var(--account-info--bg-color);
 }
 
 #chat-area form .my-icon{
