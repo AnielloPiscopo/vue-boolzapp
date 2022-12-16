@@ -92,7 +92,7 @@
 
 
                         <ul id="contacts" class="list-unstyled overflow-auto">
-                            <li v-for="contact in contacts" class="py-2 d-flex justify-content-between pe-3 border-top">
+                            <li v-for="(contact,index) in contacts" class="py-2 d-flex justify-content-between pe-3 border-top" @click = 'updateIndex(index)'>
                                 <div class="d-flex w-75">
                                     <img :src=`assets/img/avatar${contact.avatar}.jpg` alt="aasddsf" class="rounded rounded-circle ms-3">
                                     <span class="d-flex flex-column px-3">
@@ -113,9 +113,9 @@
                         <section id="chat-area" class="d-flex flex-column h-100">
                             <section class="py-2 px-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
                                 <div class="w-75 d-flex align-items-center">
-                                    <img src="assets/img/avatar_1.jpg" alt="aasddsf" class="rounded rounded-circle">
+                                    <img :src=`assets/img/avatar${contacts[activeContactIndex].avatar}.jpg` alt="aasddsf" class="rounded rounded-circle">
                                     <span class="d-flex flex-column px-3">
-                                        <span>Michele</span>
+                                        <span>{{contacts[activeContactIndex].name}}</span>
 
                                         <span class="my-small-text">Ultimo accesso oggi alle 12:00</span>
                                     </span>

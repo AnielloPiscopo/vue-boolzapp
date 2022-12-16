@@ -180,4 +180,12 @@ createApp({
             activeContactIndex : 0,
         }
     },
+
+
+
+    methods: {
+        updateIndex(index){
+            this.activeContactIndex = index;
+        }
+    },
 }).mount('#app')
