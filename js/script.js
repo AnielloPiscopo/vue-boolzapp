@@ -191,7 +191,6 @@ createApp({
         },
 
         addElementToTheList(list,newElementText,status){
-            this.contactMessagePresence = false;
             newElementText = newElementText.toLowerCase();
 
             if(newElementText !='' && newElementText.length>=2){
@@ -213,7 +212,17 @@ createApp({
         },
 
         receiveMessage(listOfMessages,message,messageStatus){
-            setTimeout(this.addElementToTheList,1000,listOfMessages,message,'received'); 
+            setTimeout(this.botMessage,1000); 
         },
+
+        botMessage(){
+            const element = {
+                date:'16/12/2022',
+                message: 'ok',
+                status : 'receveid',
+            }
+
+            this.contacts[this.activeContactIndex].messages.push(element);
+        }
     },
 }).mount('#app')
