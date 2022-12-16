@@ -180,6 +180,7 @@ createApp({
             activeContactIndex : 0,
             newMessage : '',
             contactMessagePresence : false,
+            controlContactsValue:'',
         }
     },
 
@@ -213,5 +214,15 @@ createApp({
         receiveMessage(listOfMessages,message,messageStatus){
             setTimeout(this.addElementToTheList,1000,listOfMessages,message,messageStatus); 
         },
+
+        controlPresenceInList(char){
+            if((/[a-zA-Z]/).test(char)){
+                this.contacts.forEach(contact => {
+                    if(char === '') contact.visible = true;
+    
+                    else if(!contact.name.toLowerCase().includes(char)) contact.visible = false;
+                })
+            }
+        }
     },
 }).mount('#app')
