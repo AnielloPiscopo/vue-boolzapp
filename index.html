@@ -55,7 +55,7 @@
 
 
             <!-- * MAIN -->
-            <main class="position-absolute top-50 start-50">
+            <main>
                 <div class="row h-100 g-0">
                     <!-- ? CONTAINER DEI CONTATTI -->
                     <div class="col-4 h-100">
@@ -128,7 +128,7 @@
 
                     <!-- ? AREA DELLA CHAT -->
                     <div class="col-8 h-100">
-                        <article id="chat-area">
+                        <article id="chat-area" class="d-flex justify-content-between flex-column">
                             <!-- * Info dell'account -->
                             <div class="py-2 px-2 pe-3 align-items-center d-flex justify-content-between my-account-info">
                                 <div class="w-75 d-flex align-items-center">
@@ -149,7 +149,7 @@
 
 
                             <!-- * Messaggi della chat -->
-                            <article id="chat-messages" class="p-5 overflow-auto">
+                            <article id="chat-messages" class="p-5 overflow-auto h-100">
                                 <div v-for="(element,index) in contacts[activeContactIndex].messages" class="my-message-container clearfix">
                                     <span class="my-message rounded rounded-3 px-3 py-2 d-flex justify-content-between align-items-center position-relative" :class="(element.status==='sent') ? 'my-personal-message' : 'my-contact-message'">
                                         <span>{{element.message}}</span>

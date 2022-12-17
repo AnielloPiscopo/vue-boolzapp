@@ -39,6 +39,13 @@ STILE GENERICO */
     --bg-upper-part--height:15vh;
     --bg-lower-part--height:calc(100vh - var(--bg-upper-part--height));
     --main--width:80%;
+    --main-height: 95vh;
+
+
+    /* ? OTHER */
+    --main--position:absolute;
+    --translate-to-center:translate(-50%,-50%);
+    --background--display:block;
 }
 
 
@@ -73,6 +80,10 @@ body{
 STILE SPECIFICO */
 
 /* * SEZIONE DELLO SFONDO */
+#background{
+    display: var(--background--display);
+}
+
 #background .my-upper-part{
     background-color: var(--bg-upper-part--bg-color);
     height: var(--bg-upper-part--height);
@@ -87,9 +98,12 @@ STILE SPECIFICO */
 
 /* * MAIN */
 main{
-    transform: translate(-50%,-50%);
+    transform: var(--translate-to-center);
+    position: var(--main--position);
+    top:50%;
+    left: 50%;
     width: var(--main--width);
-    height: 95vh;
+    height: var(--main-height);
     background-color: var(--main--bg-color);
 }
 
@@ -130,7 +144,7 @@ main .my-account-info .my-icon{
 
 /* ? AREA CONTATTI */
 #contacts{
-    height: 30rem;
+    height: var(--contacts--height);
 }
 
 #contacts li{
@@ -145,7 +159,7 @@ main .my-account-info .my-icon{
 /* ? AREA DELLA CHAT */
 #chat-messages{
     background-image: url('../assets/img/mine.jpg');
-    height: 36.35rem;
+    height: var(--chat-messages--height);
 }
 
 #chat-messages .my-message-container{
@@ -213,3 +227,17 @@ main .my-account-info .my-icon{
 
 /* ?--------------------------------------------------------------------
 RESPONSIVENESS */
+
+@media screen and (max-width:768px){
+    :root{
+        /* ? DIMENSIONI */
+        --main--width: 100%;
+        --main-height: 100%;
+
+
+        /* ? OTHER */
+        --main--position:static;
+        --translate-to-center:none;
+        --background--display:none;
+    }
+}
