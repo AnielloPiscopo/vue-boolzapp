@@ -163,6 +163,14 @@ main .my-account-info .my-icon{
     cursor: pointer;
 }
 
+#chat-messages .my-message-container .my-message .my-icon.my-angle-down{
+    visibility: hidden;
+}
+
+#chat-messages .my-message-container .my-message:hover .my-icon.my-angle-down{
+    visibility: visible;
+}
+
 #chat-messages .my-message-container .my-message .my-hidden-options{
     background-color: var(--main--bg-color);
     cursor: pointer;
