@@ -169,26 +169,17 @@ main .my-account-info .my-icon{
 }
 
 #chat-messages .my-message-container .my-message .my-icon{
-    display: none;
     cursor: pointer;
-}
-
-#chat-messages .my-message-container .my-message:hover .my-icon.my-angle-down{
-    display: block;
-}
-
-#chat-messages .my-message-container .my-message .my-icon.my-angle-down.my-active{
-    display: none;
-}
-
-#chat-messages .my-message-container .my-message .my-icon.my-angle-down:hover + .my-angle-up{
-    display: block;
 }
 
 #chat-messages .my-message-container .my-message .my-hidden-options{
     background-color: var(--main--bg-color);
-    display: none;
+    cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#chat-messages .my-message-container .my-message .my-hidden-options .my-hidden-option:hover{
+    background-color: var(--contact-hover--bg-color);
 }
 
 #chat-messages .my-message-container .my-message .my-hidden-options.my-active{

@@ -181,7 +181,7 @@ createApp({
             newMessage : '',
             contactMessagePresence : false,
             controlContactsValue:'',
-            hiddenOptionsPresence : false,
+            activeMessageIndex : -1,
         }
     },
 
@@ -239,8 +239,12 @@ createApp({
             })
         },
 
-        showHiddenElement(){
-            this.hiddenOptionsPresence = !this.hiddenOptionsPresence;
+        showHiddenOptions(index){
+            this.activeMessageIndex = index;
+        },
+
+        hideOptions(){
+            this.activeMessageIndex = -1;
         },
     },
 }).mount('#app')

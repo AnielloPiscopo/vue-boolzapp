@@ -150,14 +150,14 @@
 
                             <!-- * Messaggi della chat -->
                             <article id="chat-messages" class="p-5 overflow-auto">
-                                <div v-for="element in contacts[activeContactIndex].messages" class="my-message-container clearfix">
+                                <div v-for="(element,index) in contacts[activeContactIndex].messages" class="my-message-container clearfix">
                                     <span class="my-message rounded rounded-3 px-3 py-2 d-flex justify-content-between align-items-center position-relative" :class="(element.status==='sent') ? 'my-personal-message' : 'my-contact-message'">
                                         <span>{{element.message}}</span>
-                                        <i class="my-icon fa-solid fa-angle-down my-angle-down" @click="showHiddenElement()"></i>
-                                        <i class="my-icon fa-solid fa-angle-up my-angle-up"></i>
-                                        <div class="my-hidden-options position-absolute" :class="(hiddenOptionsPresence) ? 'my-active':''">
-                                            <div class="p-3 pb-2">Info del messaggio</div>
-                                            <div class="p-3 pt-2">Cancella messaggio</div>
+                                        <i class="my-icon fa-solid fa-angle-down my-angle-down" @click="showHiddenOptions(index)" v-if="activeMessageIndex !== index"></i>
+                                        <i class="my-icon fa-solid fa-angle-up my-angle-up" v-if="activeMessageIndex === index" @click="hideOptions()"></i>
+                                        <div class="my-hidden-options position-absolute" v-if="activeMessageIndex === index">
+                                            <div class="p-3 pb-2 my-hidden-option">Info del messaggio</div>
+                                            <div class="p-3 pt-2 my-hidden-option">Cancella messaggio</div>
                                         </div>
                                     </span>
                                 </div>
