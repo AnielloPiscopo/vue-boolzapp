@@ -239,12 +239,17 @@ createApp({
             })
         },
 
-        showHiddenOptions(index){
-            this.activeMessageIndex = index;
+        showHiddenOptions(messagIindex){
+            this.activeMessageIndex = messagIindex;
         },
 
         hideOptions(){
             this.activeMessageIndex = -1;
+        },
+
+        deleteMessage(messageIndex){
+            this.contacts[this.activeContactIndex].messages.splice(messageIndex,1);
+            this.hideOptions();
         },
     },
 }).mount('#app')
