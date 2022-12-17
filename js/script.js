@@ -181,6 +181,7 @@ createApp({
             newMessage : '',
             contactMessagePresence : false,
             controlContactsValue:'',
+            hiddenOptionsPresence : false,
         }
     },
 
@@ -236,6 +237,10 @@ createApp({
             this.contacts.forEach(contact => {
                 if(value === '') contact.visible = true;
             })
-        }
+        },
+
+        showHiddenElement(){
+            this.hiddenOptionsPresence = !this.hiddenOptionsPresence;
+        },
     },
 }).mount('#app')

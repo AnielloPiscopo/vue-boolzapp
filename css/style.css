@@ -152,20 +152,53 @@ main .my-account-info .my-icon{
     margin: 0.5rem;
 }
 
-#chat-messages .my-message{
+#chat-messages .my-message-container .my-message{
     font-size: 0.8rem;
     width: 40%;
     cursor: text;
 }
 
-#chat-messages .my-message.my-personal-message{
+#chat-messages .my-message-container .my-message.my-personal-message{
     background-color: var(--personal-messages--bg-color);
     float: right;
 }
 
-#chat-messages .my-message.my-contact-message{
+#chat-messages .my-message-container .my-message.my-contact-message{
     background-color: var(--main--bg-color);
     float: left;
+}
+
+#chat-messages .my-message-container .my-message .my-icon{
+    display: none;
+    cursor: pointer;
+}
+
+#chat-messages .my-message-container .my-message:hover .my-icon.my-angle-down{
+    display: block;
+}
+
+#chat-messages .my-message-container .my-message .my-icon.my-angle-down.my-active{
+    display: none;
+}
+
+#chat-messages .my-message-container .my-message .my-icon.my-angle-down:hover + .my-angle-up{
+    display: block;
+}
+
+#chat-messages .my-message-container .my-message .my-hidden-options{
+    background-color: var(--main--bg-color);
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#chat-messages .my-message-container .my-message .my-hidden-options.my-active{
+    display: block;
+}
+
+#chat-messages .my-message-container .my-message .my-hidden-options.position-absolute{
+    z-index: 1;
+    top: 75%;
+    right: 0;
 }
 
 #input-send-message{
