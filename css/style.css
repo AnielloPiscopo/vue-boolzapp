@@ -1,21 +1,3 @@
-/* !--------------------------------------------------------------------
-MOMENTANEO */
-#chat-area{
-    height: 100%;
-}
-#chat-messages{
-    background-color: rebeccapurple;
-}
-
-
-
-
-
-
-
-
-
-
 /* *--------------------------------------------------------------------
 STILE GENERICO */
 
@@ -39,7 +21,7 @@ STILE GENERICO */
     --bg-upper-part--height:15vh;
     --bg-lower-part--height:calc(100vh - var(--bg-upper-part--height));
     --main--width:80%;
-    --main-height: 95vh;
+    --main--height: 95vh;
 
 
     /* ? OTHER */
@@ -54,7 +36,7 @@ STILE GENERICO */
 body{
     color: var(--primary-color);
     font-family: 'Lato';
-    min-width: 756px;
+    min-width: 680px;
     overflow: hidden;
 }
 
@@ -103,7 +85,7 @@ main{
     top:50%;
     left: 50%;
     width: var(--main--width);
-    height: var(--main-height);
+    height: var(--main--height);
     background-color: var(--main--bg-color);
 }
 
@@ -143,10 +125,6 @@ main .my-account-info .my-icon{
 
 
 /* ? AREA CONTATTI */
-#contacts{
-    height: var(--contacts--height);
-}
-
 #contacts li{
     cursor: pointer;
 }
@@ -159,7 +137,6 @@ main .my-account-info .my-icon{
 /* ? AREA DELLA CHAT */
 #chat-messages{
     background-image: url('../assets/img/mine.jpg');
-    height: var(--chat-messages--height);
 }
 
 #chat-messages .my-message-container{
@@ -232,7 +209,7 @@ RESPONSIVENESS */
     :root{
         /* ? DIMENSIONI */
         --main--width: 100%;
-        --main-height: 100%;
+        --main--height: 100vh;
 
 
         /* ? OTHER */
