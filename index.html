@@ -116,7 +116,7 @@
                                         <div class="my-contact-info d-flex flex-column px-3 w-100">
                                             <div class="d-flex justify-content-between">
                                                 <span>{{contact.name}}</span>
-                                                <span class="my-small-text">12:00</span>
+                                                <span class="my-small-text">{{contact.messages[contact.messages.length-1].date}}</span>
                                             </div>
         
                                             <span class="my-small-text">{{contact.messages[contact.messages.length-1].message}}</span>
@@ -169,6 +169,7 @@
                                             <div class="p-3 pb-2 my-hidden-option">Info del messaggio</div>
                                             <div class="p-3 pt-2 my-hidden-option" @click="deleteMessage(index)">Cancella messaggio</div>
                                         </div>
+                                        <span class="position-absolute my-small-text my-date">12:00</span>
                                     </span>
                                 </div>
                             </article>

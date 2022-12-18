@@ -206,6 +206,17 @@ main .my-hidden-options.position-absolute{
 #chat-messages .my-message-container .my-message .my-hidden-options.position-absolute{
     top: 75%;
     right: 0;
+    z-index: 2;
+}
+
+#chat-messages .my-message-container .my-message .my-date{
+    font-size: 0.6rem;
+}
+
+#chat-messages .my-message-container .my-message .my-date.position-absolute{
+    z-index: 1;
+    right: 5%;
+    bottom: 0;
 }
 
 #input-send-message{

@@ -1,5 +1,8 @@
 // * ABIENTE DI SVILUPPO LUXON
 var DateTime = luxon.DateTime;
+var Settings = luxon.Settings;
+Settings.defaultOutputCalendar = 'iso8601';
+
 
 
 
@@ -204,7 +207,7 @@ createApp({
 
             if(newElementText !=''){
                 const newElement = {
-                    date: 'sdfsdf',
+                    date: DateTime.now().toLocaleString(DateTime.TIME_SIMPLE),
                     message: newElementText,
                     status: status,
                 }
@@ -269,7 +272,6 @@ createApp({
 
         eliminateElementOfList(list , indexOfElementOfList){
             list.splice(indexOfElementOfList,1);
-            this.showContactHiddenOptions();
         },
 
         lockAContact(){
