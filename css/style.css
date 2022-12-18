@@ -15,6 +15,7 @@ STILE GENERICO */
     --personal-messages--bg-color:#d5f9ba;
     --account-info--bg-color:#f3eeea;
     --contact-hover--bg-color:#e9ebeb;
+    --account-info-icon--color:rgb(182, 178, 178);
 
 
     /* ? DIMENSIONI */
@@ -101,6 +102,29 @@ main .my-account-info{
 
 main .my-account-info .my-icon{
     font-size: 1.3rem;
+    color: var(--account-info-icon--color);
+}
+
+main .my-account-info .my-icon:hover{
+    color: var(--small-text--color);
+}
+
+main .my-hidden-options{
+    background-color: var(--main--bg-color);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+main .my-hidden-options .my-hidden-option:hover{
+    background-color: var(--contact-hover--bg-color);
+}
+
+main .my-hidden-options.my-active{
+    display: block;
+}
+
+main .my-hidden-options.position-absolute{
+    z-index: 1;
 }
 
 /* ? ASIDE */
@@ -110,6 +134,10 @@ main .my-account-info .my-icon{
 
 #contacts-container aside .my-small-text{
     cursor: pointer;
+}
+
+#contacts-container aside .my-small-text:hover{
+    font-weight: bold;
 }
 
 #contacts-container aside .my-icon{
@@ -131,6 +159,10 @@ main .my-account-info .my-icon{
 
 #contacts li:hover{
     background-color: var(--contact-hover--bg-color);
+}
+
+#contacts li:active{
+    filter: brightness(80%);
 }
 
 
@@ -171,22 +203,7 @@ main .my-account-info .my-icon{
     visibility: visible;
 }
 
-#chat-messages .my-message-container .my-message .my-hidden-options{
-    background-color: var(--main--bg-color);
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-#chat-messages .my-message-container .my-message .my-hidden-options .my-hidden-option:hover{
-    background-color: var(--contact-hover--bg-color);
-}
-
-#chat-messages .my-message-container .my-message .my-hidden-options.my-active{
-    display: block;
-}
-
 #chat-messages .my-message-container .my-message .my-hidden-options.position-absolute{
-    z-index: 1;
     top: 75%;
     right: 0;
 }

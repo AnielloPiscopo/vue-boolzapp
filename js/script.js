@@ -182,6 +182,7 @@ createApp({
             contactMessagePresence : false,
             controlContactsValue:'',
             activeMessageIndex : -1,
+            contactHiddenOptionsPresence: false,
         }
     },
 
@@ -239,17 +240,21 @@ createApp({
             })
         },
 
-        showHiddenOptions(messagIindex){
+        showMessagesHiddenOptions(messagIindex){
             this.activeMessageIndex = messagIindex;
         },
 
-        hideOptions(){
+        hideMessagesOptions(){
             this.activeMessageIndex = -1;
         },
 
         deleteMessage(messageIndex){
             this.contacts[this.activeContactIndex].messages.splice(messageIndex,1);
-            this.hideOptions();
+            this.hideMessagesOptions();
         },
+
+        showContactHiddenOptions(){
+            this.contactHiddenOptionsPresence = !this.contactHiddenOptionsPresence
+        }
     },
 }).mount('#app')
