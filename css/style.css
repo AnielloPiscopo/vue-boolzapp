@@ -123,10 +123,6 @@ main .my-hidden-options.my-active{
     display: block;
 }
 
-main .my-hidden-options.position-absolute{
-    z-index: 1;
-}
-
 /* ? ASIDE */
 #contacts-container aside{
     background-color: var(--aside--bg-color);
@@ -167,6 +163,10 @@ main .my-hidden-options.position-absolute{
 
 
 /* ? AREA DELLA CHAT */
+#chat-area .my-account-info .my-hidden-options.position-absolute{
+    z-index: 3;
+}
+
 #chat-messages{
     background-image: url('../assets/img/mine.jpg');
 }
