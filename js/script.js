@@ -1,3 +1,8 @@
+// * ABIENTE DI SVILUPPO LUXON
+var DateTime = luxon.DateTime;
+
+
+
 // * ABIENTE DI SVILUPPO VUE
 const {createApp} = Vue;
 
@@ -255,6 +260,15 @@ createApp({
 
         showContactHiddenOptions(){
             this.contactHiddenOptionsPresence = !this.contactHiddenOptionsPresence
+        },
+
+        eliminateList(list){
+            list.length=1;
+        },
+
+        eliminateElementOfList(list , indexOfElementOfList){
+            list.splice(indexOfElementOfList,1);
+            this.showContactHiddenOptions();
         }
     },
 }).mount('#app')
