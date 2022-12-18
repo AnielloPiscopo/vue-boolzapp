@@ -151,7 +151,8 @@
                                         <div class="p-3 pb-2 my-hidden-option">Info contatto</div>
                                         <div class="p-3 pt-2 my-hidden-option" @click="eliminateList(contacts[activeContactIndex].messages)">Elimina messaggi</div>
                                         <div class="p-3 pt-2 my-hidden-option" @click="eliminateElementOfList(contacts,activeContactIndex)">Elimina chat</div>
-                                        <div class="p-3 pt-2 my-hidden-option">Blocca</div>
+                                        <div class="p-3 pt-2 my-hidden-option" @click="lockAContact()" v-if="!contactLocked">Blocca</div>
+                                        <div class="p-3 pt-2 my-hidden-option" @click="unlockAContact()" v-if="contactLocked">Sblocca</div>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +175,7 @@
 
 
                             <!-- * Sezione invio messaggi -->
-                            <div id="input-send-message-area" class="input-group py-2 d-flex align-items-center">
+                            <div id="input-send-message-area" class="input-group py-2 d-flex align-items-center" v-if="!contactLocked">
                                 <div class="input-group-prepend">
                                   <i class="fa-regular fa-face-smile input-group-text px-4 border-0 bg-transparent my-icon"></i>
                                 </div>

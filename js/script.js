@@ -188,6 +188,7 @@ createApp({
             controlContactsValue:'',
             activeMessageIndex : -1,
             contactHiddenOptionsPresence: false,
+            contactLocked : false,
         }
     },
 
@@ -269,6 +270,14 @@ createApp({
         eliminateElementOfList(list , indexOfElementOfList){
             list.splice(indexOfElementOfList,1);
             this.showContactHiddenOptions();
-        }
+        },
+
+        lockAContact(){
+            this.contactLocked = true;
+        },
+
+        unlockAContact(){
+            this.contactLocked = false;
+        },
     },
 }).mount('#app')
