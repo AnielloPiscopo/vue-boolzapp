@@ -282,7 +282,7 @@ createApp({
         },
 
         obtainAValidTime(element){
-            let time = DateTime.fromFormat(element,'dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.DATETIME_SHORT);
+            let time = DateTime.fromFormat(element,'dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.TIME_SIMPLE);
 
             return time;
         }
