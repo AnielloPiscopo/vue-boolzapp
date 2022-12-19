@@ -288,3 +288,6 @@ createApp({
         }
     },
 }).mount('#app')
+
+const arr=['shi'];
+console.log(arr.join());

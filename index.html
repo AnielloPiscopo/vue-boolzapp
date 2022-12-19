@@ -116,10 +116,10 @@
                                         <div class="my-contact-info d-flex flex-column px-3 w-100">
                                             <div class="d-flex justify-content-between">
                                                 <span>{{contact.name}}</span>
-                                                <span class="my-small-text">{{obtainAValidTime(contact.messages[contact.messages.length-1].date)}}</span>
+                                                <span class="my-small-text" v-if="contact.messages[contact.messages.length-1]!=undefined">{{obtainAValidTime(contact.messages[contact.messages.length-1].date)}}</span>
                                             </div>
         
-                                            <span class="my-small-text">{{contact.messages[contact.messages.length-1].message}}</span>
+                                            <span class="my-small-text" v-if="contact.messages[contact.messages.length-1]!=undefined">{{contact.messages[contact.messages.length-1].message}}</span>
                                         </div>
                                     </article>
                                 </li>
