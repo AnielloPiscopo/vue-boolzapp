@@ -1,7 +1,5 @@
 // * ABIENTE DI SVILUPPO LUXON
-var DateTime = luxon.DateTime;
-var Settings = luxon.Settings;
-Settings.defaultOutputCalendar = 'iso8601';
+const DateTime = luxon.DateTime;
 
 
 
