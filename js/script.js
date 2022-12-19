@@ -216,10 +216,6 @@ createApp({
             this.newMessage = '';
         },
 
-        receiveMessage(listOfMessages,newContactMessage,messageStatus){
-            setTimeout(this.addElementToTheList,1000,listOfMessages,newContactMessage,messageStatus); 
-        },
-
         eliminateList(list){
             list.length=0;
         },
@@ -237,6 +233,10 @@ createApp({
 
 
         // * FUNZIONI SPECIFICHE
+        receiveMessage(listOfMessages,newContactMessage,messageStatus){
+            setTimeout(this.addElementToTheList,1000,listOfMessages,newContactMessage,messageStatus); 
+        },
+
         updateIndex(index){
             this.activeContactIndex = index;
         },
