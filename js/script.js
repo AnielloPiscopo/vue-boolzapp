@@ -212,10 +212,6 @@ createApp({
             }
         },
 
-        refreshInputField(){
-            this.newMessage = '';
-        },
-
         eliminateList(list){
             list.length=0;
         },
@@ -235,6 +231,10 @@ createApp({
         // * FUNZIONI SPECIFICHE
         receiveMessage(listOfMessages,newContactMessage,messageStatus){
             setTimeout(this.addElementToTheList,1000,listOfMessages,newContactMessage,messageStatus); 
+        },
+
+        refreshInputField(){
+            this.newMessage = '';
         },
 
         updateIndex(index){
