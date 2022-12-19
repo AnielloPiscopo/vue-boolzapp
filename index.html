@@ -176,16 +176,21 @@
 
 
                             <!-- * Sezione invio messaggi -->
-                            <div id="input-send-message-area" class="input-group py-2 d-flex align-items-center" v-if="!contactLocked">
-                                <div class="input-group-prepend">
-                                  <i class="fa-regular fa-face-smile input-group-text px-4 border-0 bg-transparent my-icon"></i>
+                            <div id="input-send-message-area">
+                                <div class="my-input-container input-group py-2 d-flex align-items-center" v-if="!contactLocked">
+                                    <div class="input-group-prepend">
+                                        <i class="fa-regular fa-face-smile input-group-text px-4 border-0 bg-transparent my-icon"></i>
+                                      </div>
+      
+                                      <input type="text" class="form-control my-small-text my-input" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyup.enter="addElementToTheList(contacts[activeContactIndex].messages,newMessage,'sent');receiveMessage(contacts[activeContactIndex].messages,'ok','received')">
+      
+                                      <div class="input-group-append">
+                                          <i class="fa-solid fa-microphone my-icon px-4 border-0 input-group-text bg-transparent"></i>
+                                      </div>
                                 </div>
 
-                                <input type="text" class="form-control my-small-text my-input" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyup.enter="addElementToTheList(contacts[activeContactIndex].messages,newMessage,'sent');receiveMessage(contacts[activeContactIndex].messages,'ok','received')">
-
-                                <div class="input-group-append">
-                                    <i class="fa-solid fa-microphone my-icon px-4 border-0 input-group-text bg-transparent"></i>
-                                </div>
+                                <p class="my-text-content my-small-text d-flex align-items-center justify-content-center m-3" v-else>Impossibile inviare un messaggio al contatto bloccato {{contacts[activeContactIndex].name}}
+                                </p>
                             </div>
                         </article>
                     </div>
