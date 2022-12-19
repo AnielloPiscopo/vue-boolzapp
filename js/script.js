@@ -288,10 +288,3 @@ createApp({
         }
     },
 }).mount('#app')
-
-
-let date = '10/01/2020 15:30:55';
-let shish = DateTime.fromFormat(date,'dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.TIME_SIMPLE)
-console.log(shish);
-let time = DateTime.now().toFormat('dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
-console.log(time);
