@@ -266,7 +266,7 @@ createApp({
         },
 
         eliminateList(list){
-            list.length=1;
+            list.length=0;
         },
 
         eliminateElementOfList(list , indexOfElementOfList){
