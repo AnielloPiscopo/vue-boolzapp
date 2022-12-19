@@ -182,7 +182,7 @@
                                         <i class="fa-regular fa-face-smile input-group-text px-4 border-0 bg-transparent my-icon"></i>
                                       </div>
       
-                                      <input type="text" class="form-control my-small-text my-input" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyup.enter="addElementToTheList(contacts[activeContactIndex].messages,newMessage,'sent');receiveMessage(contacts[activeContactIndex].messages,'ok','received')">
+                                      <input type="text" class="form-control my-small-text my-input" placeholder="Scrivi un messaggio" v-model.trim="newMessage" @keyup.enter="addElementToTheList(contacts[activeContactIndex].messages,newMessage,'sent');refreshInputField();receiveMessage(contacts[activeContactIndex].messages,'ok','received')">
       
                                       <div class="input-group-append">
                                           <i class="fa-solid fa-microphone my-icon px-4 border-0 input-group-text bg-transparent"></i>

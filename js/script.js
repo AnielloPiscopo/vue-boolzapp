@@ -196,10 +196,7 @@ createApp({
 
 
     methods: {
-        updateIndex(index){
-            this.activeContactIndex = index;
-        },
-
+        // * FUNZIONI GENERICI E RIUTILIZZABILI
         addElementToTheList(list,newElementText,elementStatus){
             newElementText = newElementText.toLowerCase();
             let elementDate = DateTime.now().toFormat('dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
@@ -213,8 +210,6 @@ createApp({
     
                 list.push(newElement);
             }
-
-            this.refreshInputField();
         },
 
         refreshInputField(){
@@ -223,6 +218,27 @@ createApp({
 
         receiveMessage(listOfMessages,newContactMessage,messageStatus){
             setTimeout(this.addElementToTheList,1000,listOfMessages,newContactMessage,messageStatus); 
+        },
+
+        eliminateList(list){
+            list.length=0;
+        },
+
+        eliminateElementOfList(list , indexOfElementOfList){
+            list.splice(indexOfElementOfList,1);
+        },
+
+        obtainAValidTime(element){
+            let time = DateTime.fromFormat(element,'dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.TIME_SIMPLE);
+
+            return time;
+        },
+
+
+
+        // * FUNZIONI SPECIFICHE
+        updateIndex(index){
+            this.activeContactIndex = index;
         },
 
         controlPresenceInList(value){
@@ -265,14 +281,6 @@ createApp({
             this.contactHiddenOptionsPresence = !this.contactHiddenOptionsPresence
         },
 
-        eliminateList(list){
-            list.length=0;
-        },
-
-        eliminateElementOfList(list , indexOfElementOfList){
-            list.splice(indexOfElementOfList,1);
-        },
-
         lockAContact(){
             this.contactLocked = true;
         },
@@ -280,12 +288,6 @@ createApp({
         unlockAContact(){
             this.contactLocked = false;
         },
-
-        obtainAValidTime(element){
-            let time = DateTime.fromFormat(element,'dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.TIME_SIMPLE);
-
-            return time;
-        }
     },
 }).mount('#app')
 
