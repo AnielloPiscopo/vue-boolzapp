@@ -202,14 +202,15 @@ createApp({
             this.activeContactIndex = index;
         },
 
-        addElementToTheList(list,newElementText,status){
+        addElementToTheList(list,newElementText,elementStatus){
             newElementText = newElementText.toLowerCase();
+            let elementDate = DateTime.now().toFormat('dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
 
             if(newElementText !=''){
                 const newElement = {
-                    date: DateTime.now().toLocaleString(DateTime.TIME_SIMPLE),
+                    date: elementDate,
                     message: newElementText,
-                    status: status,
+                    status: elementStatus,
                 }
     
                 list.push(newElement);
@@ -281,5 +282,18 @@ createApp({
         unlockAContact(){
             this.contactLocked = false;
         },
+
+        obtainAValidTime(element){
+            let time = DateTime.fromFormat(element,'dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.DATETIME_SHORT);
+
+            return time;
+        }
     },
 }).mount('#app')
+
+
+let date = '10/01/2020 15:30:55';
+let shish = DateTime.fromFormat(date,'dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.TIME_SIMPLE)
+console.log(shish);
+let time = DateTime.now().toFormat('dd/MM/yyyy hh:mm:S').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+console.log(time);
