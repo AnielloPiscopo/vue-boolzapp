@@ -3,7 +3,7 @@
 <img src="https://img.shields.io/badge/Vue.js-4FC08D.svg?style&logo=vuedotjs&logoColor=white" width="100" />
 <br>VUE-BOOLZAPP
 </h1>
-<h3>◦ Simple recreation of WhatsApp Web made with HTML,CSS,bootstrap ,JS and Vue.js that represents a re-proposal of an old project(js-array-objects-carousel)</h3>
+<h3>◦ Simple recreation of WhatsApp Web made with HTML,CSS,bootstrap ,JS and Vue.js</h3>
 <h3>◦ Developed during the course of Full-Stack Web Developer with Boolean</h3>
 <h3>◦ Link: https://aniellopiscopo.github.io/vue-boolzapp/</h3>
 
