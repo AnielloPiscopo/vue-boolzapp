@@ -23,8 +23,15 @@
 
 ## 📒 Table of Contents
 - [📒 Table of Contents](#-table-of-contents)
+- [⚙️ Features](#-features)
 - [🚀 Getting Started](#-getting-started)
 - [📄 License](#-license)
+
+---
+
+## ⚙️ Features
+
+1. Responsive
 
 ---
 
